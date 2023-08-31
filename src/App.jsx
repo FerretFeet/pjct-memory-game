@@ -96,11 +96,14 @@ export default function App() {
 
   return (
     <>
-
-    {activeTitles.map((title) => {
-      return <Card key={title} title={title}
-       onCardClick={() => handleClick(title)}/>
-    })}
+      <header>
+        <h1>Memory Game</h1>
+        <span>Score: {score}</span>
+      </header>
+      {activeTitles.map((title) => {
+        return <Card key={title} title={title}
+        onCardClick={() => handleClick(title)}/>
+      })}
     </>
   )
 
